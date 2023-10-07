@@ -1,0 +1,138 @@
+@import "./variables.scss";
+
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff2") format("woff2"),
+    url("../fonts/#{$url}.woff") format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@mixin container {
+  max-width: $containerMaxWidth;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@mixin containerTablet {
+  max-width: $containerMaxWidthTablet;
+  margin: 0 auto;
+  padding: 0 31px;
+}
+
+@mixin containerTablet {
+  max-width: $containerMaxWidthTablet;
+  margin: 0 auto;
+  padding: 0 31px;
+}
+
+@mixin container768 {
+  max-width: $containerMaxWidth768;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+@mixin containerMobile {
+  max-width: $containerMaxWidthMobile;
+  margin: 0 auto;
+  padding: 0 21px;
+}
+
+@mixin linkstyle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF
+}
+
+@mixin heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 104%;
+  color: #202020;
+}
+
+@mixin headingMobile {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #202020;
+}
+
+@mixin button {
+  padding: 15.5px 22px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background: #FF6E30;
+  outline: 3px solid transparent;
+  cursor: pointer;
+  transition: background 0.3s ease, outline 0.3s ease;
+
+  &:focus-visible {
+    outline-color: #CE4307;
+  }
+
+  &:hover {
+    background: #BC572B;
+  }
+
+  &:active {
+    background: #CE4307;
+  }
+}
+
+@mixin buttonMobile {
+  padding: 12px 22px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin hashtag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 7px 15px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  background: #333333;
+  transition: color 0.3s ease;
+
+  &:focus-visible {
+    outline: none;
+    color: #FF6E30;
+  }
+
+  &:hover {
+    color: #FF6E30;
+  }
+
+  &:active {
+    color: #CE4307;
+  }
+
+}
+
+@mixin shadow {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// @mixin linkBlock {
+//   position: absolute;
+//   top: 0;
+//   right:
+// }
+

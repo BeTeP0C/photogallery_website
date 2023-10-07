@@ -1,0 +1,46 @@
+<section class="section__contacts contacts">
+  <div class="container contacts__container">
+    <h2 class="contacts__heading">Контакты</h2>
+
+    <div class="contacts__content">
+      <div class="contacts__left">
+        <div class="contacts__overlay overlay overlay_active">
+          <button class="overlay__close btn-clear"></button>
+
+          <div class="overlay__info">
+            <h3 class="overlay__heading">Студия “High pass”</h3>
+            <address class="overlay__address">
+              107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+              <a href="tel:+749542423532" class="overlay__link">
+                <svg class="overlay__icon" width="22" height="22">
+                  <use xlink:href="./img/sprites.svg#phone"></use>
+                </svg>
+                +7 (495) 42-423-532
+              </a>
+            </address>
+          </div>
+        </div>
+
+        <div class="contacts__map" id="map"></div>
+      </div>
+      <div class="contacts__application application">
+        <h3 class="application__heading">Оставить заявку</h3>
+        <p class="application__description">
+          Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия
+        </p>
+
+        <form action="" class="application__form">
+          <label for="" class="application__label">
+            <input type="text" class="application__input" placeholder="Имя" id="name">
+          </label>
+          <label for="" class="application__label">
+            <input type="text" class="application__input" placeholder="E-mail" id="Email">
+          </label>
+          <textarea class="application__input application__textarea" placeholder="Комментарий" id="comments"></textarea>
+
+          <button class="btn-clear application__button">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

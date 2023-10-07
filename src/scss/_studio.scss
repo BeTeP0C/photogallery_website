@@ -1,0 +1,190 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.studio {
+  padding: 30px 0 70px;
+  background: #202020;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__heading {
+    margin-bottom: 2px;
+    color: #FFFFFF;
+  }
+
+  &__description {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #CACACA;
+  }
+
+  &__img {
+    margin-bottom: 25px;
+    object-fit: cover;
+  }
+}
+
+.mailling {
+  &__heading {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+    color: #FFFFFF;
+  }
+
+  &__label {
+    position: relative;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 15px 23px;
+    border: 1px solid transparent;
+    width: 100%;
+    outline: none;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    background: #4A4A4A;
+    transition: border 0.3s ease;
+
+    &.is-invalid {
+      border-color: #FF3030;
+    }
+
+    &::placeholder {
+      transition: color 0.3s ease;
+      color: #CACACA;
+    }
+
+    &:focus-visible {
+      border-color: #FF6E30;
+
+      &::placeholder {
+        color: #FF6E30;
+      }
+
+      &.is-invalid {
+        border-color: #FF3030;
+      }
+    }
+
+    &:hover::placeholder {
+      color: #FF6E30;
+    }
+  }
+
+  &__button {
+    @include button();
+  }
+}
+
+@media(max-width: $breakPoint1024) {
+  .studio {
+    padding: 30px 0 132px;
+
+    &__heading {
+      margin-bottom: 5px;
+      line-height: 31px;
+    }
+
+    &__img {
+      margin-bottom: 24px;
+      height: 322px;
+    }
+  }
+
+  .mailling {
+    &__form {
+      flex-direction: column;
+    }
+
+    &__input {
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: 342px;
+    }
+
+    &__button {
+      width: max-content;
+    }
+  }
+}
+
+@media(max-width: $breakPoint768) {
+  .studio {
+    padding: 30px 0 70px;
+
+    &__img {
+      height: 569px;
+    }
+  }
+}
+
+@media(max-width: $breakPointMobile) {
+  .studio {
+    padding: 30px 0 60px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__info {
+      margin-bottom: 18px;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    &__img {
+      margin-bottom: 26;
+      height: 278px;
+    }
+  }
+
+  .mailling {
+    &__heading {
+      margin-bottom: 14px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__input {
+      padding: 12px 23px;
+      font-size: 14px;
+      line-height: 16px;
+
+      &::placeholder {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    &__button {
+      @include buttonMobile();
+    }
+  }
+}

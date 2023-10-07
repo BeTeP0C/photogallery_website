@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/normalize.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="preload" href="./fonts/Roboto-400.woff2" as="font">
+  <link rel="preload" href="./fonts/Roboto-400.woff" as="font">
+  <link rel="preload" href="./fonts/Roboto-700.woff2" as="font">
+  <link rel="preload" href="./fonts/Roboto-700.woff" as="font">
+  <link rel="preload" href="./fonts/TTFirsNeue-400.woff2" as="font">
+  <link rel="preload" href="./fonts/TTFirsNeue-400.woff" as="font">
+  <link rel="preload" href="./fonts/TTFirsNeue-500.woff2" as="font">
+  <link rel="preload" href="./fonts/TTFirsNeue-500.woff" as="font">
+  <link rel="preload" href="./fonts/TTFirsNeue-700.woff2" as="font">
+  <link rel="preload" href="./fonts/TTFirsNeue-700.woff" as="font">
+
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=4fae429d-a6fe-4b43-9119-5d8c1d8722c9&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script defer src="./js/main.js" type="module"></script>
+</head>
+<body>
+  <header class="header">
+  <div class="header__top header-top">
+    <div class="container header-top__container header__container">
+      <img class="header__logo" src="./img/logo.svg" width="190.25" height="30.7" alt="Логотип">
+
+      <nav class="header__nav">
+        <div class="container header__menu-container">
+          <button class="btn-clear header__menu-close"></button>
+
+          <ul class="header__menu menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link">О студии</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Наши проекты</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Услуги</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Мастер-классы</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+
+          <a href="tel:+749542423532" class="header__link header__menu-phone header__phone-link">
+            <svg class="header__icon header__icon-phone" width="22" height="22">
+              <use xlink:href="./img/sprites.svg#phone"></use>
+            </svg>
+            +7 (495) 42-423-532
+          </a>
+        </div>
+      </nav>
+
+      <ul class="header__apps apps">
+        <li class="apps__app">
+          <a href="#" class="apps__link">
+            <svg class="apps__icon icon-instagram" width="30" height="30">
+              <use xlink:href="./img/sprites.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="apps__app">
+          <a href="#" class="apps__link">
+            <svg class="apps__icon icon-facebook" width="30" height="30">
+              <use xlink:href="./img/sprites.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="apps__app">
+          <a href="#" class="apps__link">
+            <svg class="apps__icon icon-vk" width="30" height="30">
+              <use xlink:href="./img/sprites.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="header__right">
+        <div class="header__phone header-top__phone">
+          <a href="tel:+749542423532" class="header__link header__phone-link">
+            <svg class="header__icon header__icon-phone" width="22" height="22">
+              <use xlink:href="./img/sprites.svg#phone"></use>
+            </svg>
+            +7 (495) 42-423-532
+          </a>
+        </div>
+
+        <div class="header__search header-top__search">
+          <form class="header__form">
+            <button class="header__button btn-clear">
+              <svg class="header__icon header__icon-search" width="24" height="24">
+                <use xlink:href="./img/sprites.svg#search"></use>
+              </svg>
+            </button>
+            <input class="header__input" type="text" placeholder="Что будем иcкать?">
+          </form>
+
+          <button class="btn-clear header__close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom header-bottom">
+    <div class="container header__container header-bottom__container">
+      <button class="header__burger btn-clear">
+        <svg class="header__icon header__icon-burger" width="20" height="18">
+          <use xlink:href="./img/sprites.svg#burger"></use>
+        </svg>
+      </button>
+
+      <div class="header__phone">
+        <a href="tel:+749542423532" class="header__link header__phone-link">
+          <svg class="header__icon header__icon-phone" width="22" height="22">
+            <use xlink:href="./img/sprites.svg#phone"></use>
+          </svg>
+          +7 (495) 42-423-532
+        </a>
+      </div>
+
+      <nav class="header__nav header-bottom__nav">
+        <ul class="header__menu menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link">О студии</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Наши проекты</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Мастер-классы</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__search">
+        <form class="header__form">
+          <button class="header__button btn-clear">
+            <svg class="header__icon header__icon-search" width="24" height="24">
+              <use xlink:href="./img/sprites.svg#search"></use>
+            </svg>
+          </button>
+          <input class="header__input" type="text" placeholder="Что будем иcкать?">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main class="main">
+    <section class="section__participants-work participants-work">
+  <div class="container participants-work__container">
+    <ul class="participants-work__list">
+      <li class="participants-work__item participants-work__item1">
+        <article class="participants-work__article participants-work__article1 participant-work">
+          <a href="#" class="participant-work__hashtag hashtag">#мастеркласс</a>
+
+          <div class="participant-work__content">
+            <span class="participant-work__autor">Мастер-класс от Игоря Робова</span>
+            <h3 class="participant-work__heading">Неоновый фотосет 2.0 7 июля 20:00</h3>
+
+            <button class="btn-clear participant-work__button">Узнать больше</button>
+          </div>
+        </article>
+      </li>
+      <li class="participants-work__item participants-work__item2">
+        <h2 class="participants-work__heading heading">Работы участников предыдущего мастер-класса</h2>
+
+        <article class="participants-work__article participant-work">
+          <a href="#" class="participant-work__link">
+            <picture class="participant-work__picture">
+              <source srcset="./img/participants-work-320-img_2.jpg" media="(max-width: 560px)">
+              <source srcset="./img/participants-work-768-img_2.jpg" media="(max-width: 768px)">
+              <source srcset="./img/participants-work-1024-img_2.jpg" media="(max-width: 1255px)">
+              <img class="participant-work__img participant-work__img-2" src="./img/participants-work-img_2.jpg" alt="" width="630" height="300">
+            </picture>
+
+          </a>
+        </article>
+      </li>
+      <li class="participants-work__item participants-work__item3 participants-work__item_tiny">
+        <article class="participants-work__article participant-work participant-work_tiny">
+          <a href="#" class="participant-work__link">
+            <picture class="participant-work__picture">
+              <source srcset="./img/participants-work-320-img_3.jpg" media="(max-width: 560px)">
+              <source srcset="./img/participants-work-768-img_3.jpg" media="(max-width: 768px)">
+              <source srcset="./img/participants-work-1024-img_3.jpg" media="(max-width: 1255px)">
+              <img class="participant-work__img participant-work__img-3" src="./img/participants-work-img_3.jpg" alt="" width="300" height="257">
+            </picture>
+          </a>
+        </article>
+      </li>
+      <li class="participants-work__item participants-work__item4 participants-work__item_tiny">
+        <article class="participants-work__article participant-work participant-work_tiny">
+          <a href="#" class="participant-work__link">
+            <picture class="participant-work__picture">
+              <source srcset="./img/participants-work-320-img_4.jpg" media="(max-width: 560px)">
+              <source srcset="./img/participants-work-768-img_4.jpg" media="(max-width: 768px)">
+              <source srcset="./img/participants-work-1024-img_4.jpg" media="(max-width: 1255px)">
+              <img class="participant-work__img participant-work__img-4" src="./img/participants-work-img_4.jpg" alt="" width="300" height="257">
+            </picture>
+          </a>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="section__studio studio">
+  <div class="container studio__container">
+    <h2 class="studio__heading heading">О студии</h2>
+
+    <div class="studio__content">
+      <div class="studio__info">
+        <p class="studio__description">
+          В рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий  фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и нарушающими общечеловеческие нормы этики.
+        </p>
+      </div>
+
+      <div class="studio__right">
+        <picture class="studio__picture">
+          <source srcset="./img/studio-320-img_1.jpg" media="(max-width: 560px)">
+          <source srcset="./img/studio-768-img_1.jpg" media="(max-width: 768px)">
+          <source srcset="./img/studio-1024-img_1.jpg" media="(max-width: 1255px)">
+          <img src="./img/studio-img_1.jpg" alt="" class="studio__img" width="630" height="255">
+        </picture>
+
+        <div class="studio__mailling mailling">
+          <h3 class="mailling__heading">Подписаться на рассылку</h3>
+
+          <form action="" class="mailling__form">
+            <label for="" class="mailling__label">
+              <input type="text" class="mailling__input" placeholder="E-mail" id="mailling">
+            </label>
+
+            <button class="mailling__button btn-clear">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section__projets projects">
+  <div class="container projects__container">
+    <div class="projects__top">
+      <h2 class="projects__heading heading">Наши проекты</h2>
+
+      <div class="projects__navigations">
+        <button class="btn-clear projects__navigation projects__next projects__navigation_blocked">1</button>
+        <button class="btn-clear projects__navigation projects__prev">2</button>
+      </div>
+    </div>
+
+    <div class="projects__slider swiper">
+      <div class="projects__wrapper swiper-wrapper">
+        <div class="projects__slide swiper-slide">
+          <ul class="projects__list">
+            <li class="projects__item projects__slide1-item1">
+              <article class="projects__article project">
+                <a href="#" class="project__hashtag hashtag">#пейзаж</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_2.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_1.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_1.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description">
+                  Синтетически, смешаны с не уникальными данными до степени...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  16 июня
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide1-item2">
+              <article class="projects__article project">
+                <a href="#" class="project__hashtag hashtag">#портрет</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_3.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_2.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_2.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description">
+                  В своём стремлении улучшить опыт мы упускаем, что явные...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  28 мая
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide1-item3">
+              <article class="projects__article project">
+                <a href="" class="project__hashtag hashtag">#предмет</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_4.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_3.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_3.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description">
+                  Равным образом, высокое качество позиционных...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  14 мая
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide1-item4">
+              <article class="projects__article project">
+                <a href="#" class="project__hashtag hashtag">#пейзаж</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-1024_4.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img4.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description">
+                  Равным образом, сложившаяся структура организации...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  15 февраля
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide1-item5 projects__slide1-item-bg1 projects__item-bg">
+              <article class="projects__article project project-big">
+                <a href="#" class="project__hashtag hashtag">#fuji</a>
+
+                <span class="project__date project-big__date">
+                  <svg class="project__icon project-big__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  9 апреля
+                </span>
+
+                <div class="project__info">
+                  <h3 class="project__heading project-big__heading">Cемантический разбор</h3>
+                  <p class="project__description project-big__description">
+                    В рамках спецификации современных стандартов, интерактивные прототипы
+                  </p>
+                </div>
+
+                <a href="#" class="project__button">О проекте</a>
+              </article>
+            </li>
+            <li class="projects__item projects__slide1-item6 projects__slide1-item-bg2 projects__item-bg">
+              <article class="projects__article project project-big">
+                <a href="#" class="project__hashtag hashtag">#проектзабвение</a>
+
+                <span class="project__date project-big__date">
+                  <svg class="project__icon project-big__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  20 марта
+                </span>
+
+                <div class="project__info">
+                  <h3 class="project__heading project-big__heading">Забвение</h3>
+                  <p class="project__description project-big__description">
+                    Играет важную роль в формировании глубокомысленных рассуждений
+                  </p>
+                </div>
+
+                <a href="#" class="project__button">О проекте</a>
+              </article>
+            </li>
+            <li class="projects__item projects__slide1-item7">
+              <article class="projects__article project project-meddium">
+                <a href="#" class="project__hashtag hashtag">#ретушь</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_6.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_6.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_6.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description project-meddium__description">
+                  Как принято считать, многие известные личности и по сей день остаются уделом либералов...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  9 марта
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide1-item8">
+              <article class="projects__article project project-meddium">
+                <a href="#" class="project__hashtag hashtag">#портрет</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_7.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_7.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_7.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description project-meddium__description">
+                  С учётом сложившейся международной обстановки, новая модель организационной...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  1 марта
+                </span>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="projects__slide swiper-slide">
+          <ul class="projects__list">
+            <li class="projects__item projects__slide2-item1 projects__slide2-item-bg1 projects__item-bg">
+              <article class="projects__article project project-big">
+                <a href="#" class="project__hashtag hashtag">#портрет</a>
+
+                <span class="project__date project-big__date">
+                  <svg class="project__icon project-big__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  24 февраля
+                </span>
+
+                <div class="project__info">
+                  <h3 class="project__heading project-big__heading">Спорная точка зрения</h3>
+                  <p class="project__description project-big__description">
+                    Ясность нашей позиции очевидна: убеждённость некоторых оппонентов
+                  </p>
+                </div>
+
+                <a href="#" class="project__button">О проекте</a>
+              </article>
+            </li>
+            <li class="projects__item projects__slide2-item2">
+              <article class="projects__article project project-meddium">
+                <a href="#" class="project__hashtag hashtag">#ретушь</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_13.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_10.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_9.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description project-meddium__description">
+                  Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  20 февраля
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide2-item3">
+              <article class="projects__article project project-meddium">
+                <a href="#" class="project__hashtag hashtag">#портрет</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_14.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_11.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_10.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description project-meddium__description">
+                  Прежде всего, повышение уровня гражданского сознания говорит о возможностях приоритизации...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  18 февраля
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide2-item4">
+              <article class="projects__article project">
+                <a href="#" class="project__hashtag hashtag">#пейзаж</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_9.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_4.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_11.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description">
+                  Равным образом, сложившаяся структура организации...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  15 февраля
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide2-item5">
+              <article class="projects__article project">
+                <a href="#" class="project__hashtag hashtag">#предмет</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_10.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_13.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_12.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description">
+                  Безусловно, реализация намеченных плановых заданий обеспечивает...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  10 февраля
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide2-item6">
+              <article class="projects__article project">
+                <a href="" class="project__hashtag hashtag">#пейзаж</a>
+
+                <a href="#" class="project__link">
+                  <picture class="project__picture">
+                    <source srcset="./img/projects-img-320_11.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/projects-img-1024_14.jpg" media="(max-width: 1255px)">
+                    <img src="./img/projects-img_13.jpg" alt="" class="project__img" width="190" height="184">
+                  </picture>
+                </a>
+
+                <p class="project__description">
+                  Безусловно, курс на социальный национальный...
+                </p>
+
+                <span class="project__date">
+                  <svg class="project__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  7 февраля
+                </span>
+              </article>
+            </li>
+            <li class="projects__item projects__slide2-item7 projects__slide2-item-bg2 projects__item-bg">
+              <article class="projects__article project project-big">
+                <a href="#" class="project__hashtag hashtag">#проектджаз</a>
+
+                <span class="project__date project-big__date">
+                  <svg class="project__icon project-big__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  2 февраля
+                </span>
+
+                <div class="project__info">
+                  <h3 class="project__heading project-big__heading">Задания по разработке своевременного</h3>
+                  <p class="project__description project-big__description">
+                    Повседневная практика показывает, что сложившаяся структура организации играет важную роль
+                  </p>
+                </div>
+
+                <a href="#" class="project__button">О проекте</a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="centering">
+        <button class="btn-clear projects__navigation projects__next projects__navigation_blocked">1</button>
+        <button class="btn-clear projects__navigation projects__prev">2</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section__services services">
+  <div class="container services__container">
+    <div class="services__left">
+      <h2 class="services__heading heading">Услуги студии</h2>
+
+      <div class="services__switching">
+        <div class="services__switchs">
+          <button class="btn-clear services__switch services__switch_active" data-path="one">Основной перечень</button>
+          <button class="btn-clear services__switch" data-path="two">Услуги по ретуши</button>
+        </div>
+
+        <div class="services__progress"></div>
+      </div>
+
+      <div class="services__tabs">
+        <div class="services__tab services__tab_active" data-target="one">
+          <ul class="services__list enumeration">
+            <li class="enumeration__item">
+              <article class="enumeration__article service">
+                <picture class="service__picture">
+                  <source srcset="./img/services-img-320_1.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_1.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_1.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_1.jpg" alt="" class="service__img" width="300" height="140">
+                </picture>
+
+                <div class="service__content">
+                  <h3 class="service__heading">Высокий уровень вовлечения</h3>
+                  <p class="service__description">
+                    Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                  </p>
+
+                  <a href="" class="service__link">
+                    Подробнее
+                    <svg class="service__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="enumeration__item">
+              <article class="enumeration__article service">
+                <picture class="service__picture">
+                  <source srcset="./img/services-img-320_2.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_2.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_2.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_2.jpg" alt="" class="service__img" width="300" height="140">
+                </picture>
+
+                <div class="service__content">
+                  <h3 class="service__heading">Диаграммы связей</h3>
+                  <p class="service__description">
+                    Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий влечет за собой процесс.
+                  </p>
+
+                  <a href="" class="service__link">
+                    Подробнее
+                    <svg class="service__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="enumeration__item">
+              <article class="enumeration__article service">
+                <picture class="service__picture">
+                  <source srcset="./img/services-img-320_3.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_3.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_3.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_3.jpg" alt="" class="service__img" width="300" height="140">
+                </picture>
+
+                <div class="service__content">
+                  <h3 class="service__heading"> Высокотехно<wbr>логичная концепция</h3>
+                  <p class="service__description">
+                    В частности, убеждённость некоторых оппонентов способствует подготовке и реализации анализа существующих паттернов.
+                  </p>
+
+                  <a href="" class="service__link">
+                    Подробнее
+                    <svg class="service__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="enumeration__item">
+              <article class="enumeration__article service">
+                <picture class="service__picture">
+                  <source srcset="./img/services-img-320_4.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_4.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_4.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_4.jpg" alt="" class="service__img" width="300" height="140">
+                </picture>
+
+                <div class="service__content">
+                  <h3 class="service__heading">Сложившаяся структура организации</h3>
+                  <p class="service__description">
+                    Кстати,  сторонники тоталитаризма в науке будут объединены в целые кластеры себе подобных.
+                  </p>
+
+                  <a href="" class="service__link">
+                    Подробнее
+                    <svg class="service__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="enumeration__item">
+              <article class="enumeration__article service">
+                <picture class="service__picture">
+                  <source srcset="./img/services-img-320_5.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_5.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_5.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_5.jpg" alt="" class="service__img" width="300" height="140">
+                </picture>
+
+                <div class="service__content">
+                  <h3 class="service__heading">Внутренние резервы и ресурсы</h3>
+                  <p class="service__description">
+                    Банальные, но неопровержимые выводы, а также ключевые особенности структуры проекта являются только методом.
+                  </p>
+
+                  <a href="" class="service__link">
+                    Подробнее
+                    <svg class="service__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="services__tab" data-target="two">
+          <ul class="services__list retouch">
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_6.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_6.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_6.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_6.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Принимая во внимание показатели</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_7.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_7.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_7.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_7.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Таким образом, выбранный нами...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_8.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_8.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_8.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_8.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Также как высокое качество...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_9.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_9.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_9.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_9.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Безусловно, семантический разбор...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_10.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_10.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_10.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_10.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Внезапно, предприниматели в интернете...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_11.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_11.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_11.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_11.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Есть над чем подумать: активные...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_12.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_12.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_12.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_12.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Сделанные на базе аналитики выводы...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_13.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_13.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_13.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_13.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Как принято считать, сторонники...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_14.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_14.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_14.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_14.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Задача организации, в особенности...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+            <li class="retouch__item">
+              <article class="retouch__article service">
+                <picture class="service__picture retouch__picture">
+                  <source srcset="./img/services-img-320_15.jpg" media="(max-width: 560px)">
+                  <source srcset="./img/services-img-768_15.jpg" media="(max-width: 768px)">
+                  <source srcset="./img/services-img-1024_15.jpg" media="(max-width: 1255px)">
+                  <img src="./img/services-img_15.jpg" alt="" class="service__img retouch__img" width="190" height="140">
+                </picture>
+
+
+                <div class="service__content retouch__content">
+                  <h3 class="service__heading retouch__heading">Активно развивающиеся страны...</h3>
+
+                  <a href="" class="service__link retouch__link">
+                    Подробнее
+                    <svg class="service__icon retouch__icon" width="19" height="13">
+                      <use xlink:href="./img/sprites.svg#arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <aside class="services__right">
+      <article class="services__stock stock">
+        <div class="stock__info">
+          <h3 class="stock__heading">Акция!</h3>
+          <span class="stock__description">Только в июне</span>
+        </div>
+
+        <div class="stock__content">
+          <img src="./img/stock.svg" alt="" class="stock__img" width="116" height="59">
+          <p class="stock__dignity">1,5 часа портретной съемки + ретушь 10 снимков</p>
+          <a href="#" class="stock__button">Узнать больше</a>
+        </div>
+      </article>
+      <div class="services__complete complete">
+        <h3 class="complete__heading">Выполненные работы</h3>
+
+        <div class="services__tabs">
+          <div class="services__tab services__tab_active" data-target="one">
+            <ul class="complete__list">
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_1.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_1.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_1.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_2.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_2.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_2.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_3.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_3.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_3.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_4.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_4.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_4.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_5.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_5.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_5.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_6.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_6.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_6.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_7.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_7.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_7.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_8.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_8.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_8.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_9.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_9.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_9.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_10.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_10.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_10.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_11.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_11.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_11.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_12.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_12.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_12.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_13.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_13.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_13.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_14.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_14.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_14.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_15.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_15.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_15.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_16.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_16.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_16.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="services__tab" data-target="two">
+            <ul class="complete__list">
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_17.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_17.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_17.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_18.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_18.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_18.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_19.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_19.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_19.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_20.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_20.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_20.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_21.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_21.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_21.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_22.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_22.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_22.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_23.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_23.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_23.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_24.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_24.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_24.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_25.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_25.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_25.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_26.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_26.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_26.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_27.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_27.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_27.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_28.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_28.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_28.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_29.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_29.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_29.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_30.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_30.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_30.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_31.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_31.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_31.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+              <li class="complete__item">
+                <a href="#" class="complete__link">
+                  <picture class="complete__picture">
+                    <source srcset="./img/complete-img-320_32.jpg" media="(max-width: 560px)">
+                    <source srcset="./img/complete-img-1024_32.jpg" media="(max-width: 1255px)">
+                    <img src="./img/complete-img_32.jpg" alt="" class="complete__img" width="80" height="60">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+    <section class="section__master-class master-classes">
+  <div class="container master-classes__container">
+    <h2 class="master-classes__heading heading">Мастер-классы</h2>
+
+    <div class="master-classes__content">
+      <picture class="master-classes__picture">
+        <source srcset="./img/masterclass-img-320_1.jpg" media="(max-width: 768px)">
+        <source srcset="./img/masterclass-img-768_1.jpg" media="(max-width: 768px)">
+        <source srcset="./img/masterclass-img-1024_1.jpg" media="(max-width: 1255px)">
+        <img src="./img/masterclass-img_1.jpg" alt="" class="master-classes__img" width="410" height="330">
+      </picture>
+
+      <div class="master-classes__info">
+        <div class="master-classes__date">
+          <span class="master-classes__calendar">
+            <svg class="master-classes__icon" width="14" height="14">
+              <use xlink:href="./img/sprites.svg#calendar"></use>
+            </svg>
+            8 июня
+          </span>
+          <span class="master-classes__clock">
+            <svg class="master-classes__icon" widht="14" height="14">
+              <use xlink:href="./img/sprites.svg#clock"></use>
+            </svg>
+            15:00
+          </span>
+        </div>
+
+        <h3 class="master-classes__title">Пленка для начинающих</h3>
+        <p class="master-classes__description">
+          Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: семантический разбор внешних противодействий, в своём классическом представлении.
+        </p>
+
+        <a href="#" class="master-classes__button">Узнать больше </a>
+      </div>
+      <ul class="master-classes__list">
+        <li class="master-classes__item">
+          <article class="master-class__article master-class">
+            <a href="#" class="master-class__link">
+              <picture class="master-class__picture">
+                <source srcset="./img/masterclass-img-1024_2.jpg" media="(max-width: 1255px)">
+                <img src="./img/masterclass-img_2.jpg" alt="" class="master-class__img" width="80" height="60">
+              </picture>
+            </a>
+
+            <div class="master-class__info">
+              <div class="master-class__date master-classes__date">
+                <span class="master-classes__calendar">
+                  <svg class="master-classes__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  9 июня
+                </span>
+                <span class="master-classes__clock">
+                  <svg class="master-classes__icon" widht="14" height="14">
+                    <use xlink:href="./img/sprites.svg#clock"></use>
+                  </svg>
+                  15:00
+                </span>
+              </div>
+
+              <h3 class="master-class__heading">Ретушь. Продвинутый уровень</h3>
+            </div>
+          </article>
+        </li>
+        <li class="master-classes__item">
+          <article class="master-class__article master-class">
+            <a href="#" class="master-class__link">
+              <picture class="master-class__picture">
+                <source srcset="./img/masterclass-img-1024_3.jpg" media="(max-width: 1255px)">
+                <img src="./img/masterclass-img_3.jpg" alt="" class="master-class__img" width="80" height="60">
+              </picture>
+            </a>
+
+            <div class="master-class__info">
+              <div class="master-class__date master-classes__date">
+                <span class="master-classes__calendar">
+                  <svg class="master-classes__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  10 июня
+                </span>
+                <span class="master-classes__clock">
+                  <svg class="master-classes__icon" widht="14" height="14">
+                    <use xlink:href="./img/sprites.svg#clock"></use>
+                  </svg>
+                  16:00
+                </span>
+              </div>
+
+              <h3 class="master-class__heading">Портретная съемка. Свет</h3>
+            </div>
+          </article>
+        </li>
+        <li class="master-classes__item">
+          <article class="master-class__article master-class">
+            <a href="#" class="master-class__link">
+              <picture class="master-class__picture">
+                <source srcset="./img/masterclass-img-1024_4.jpg" media="(max-width: 1255px)">
+                <img src="./img/masterclass-img_4.jpg" alt="" class="master-class__img" width="80" height="60">
+              </picture>
+            </a>
+
+            <div class="master-class__info">
+              <div class="master-class__date master-classes__date">
+                <span class="master-classes__calendar">
+                  <svg class="master-classes__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  11 июня
+                </span>
+                <span class="master-classes__clock">
+                  <svg class="master-classes__icon" widht="14" height="14">
+                    <use xlink:href="./img/sprites.svg#clock"></use>
+                  </svg>
+                  16:00
+                </span>
+              </div>
+
+              <h3 class="master-class__heading">Макросъемка. Проблемы и нюансы</h3>
+            </div>
+          </article>
+        </li>
+        <li class="master-classes__item">
+          <article class="master-class__article master-class">
+            <a href="#" class="master-class__link">
+              <picture class="master-class__picture">
+                <source srcset="./img/masterclass-img-1024_5.jpg" media="(max-width: 1255px)">
+                <img src="./img/masterclass-img_5.jpg" alt="" class="master-class__img" width="80" height="60">
+              </picture>
+            </a>
+
+            <div class="master-class__info">
+              <div class="master-class__date master-classes__date">
+                <span class="master-classes__calendar">
+                  <svg class="master-classes__icon" width="14" height="14">
+                    <use xlink:href="./img/sprites.svg#calendar"></use>
+                  </svg>
+                  13 июня
+                </span>
+                <span class="master-classes__clock">
+                  <svg class="master-classes__icon" widht="14" height="14">
+                    <use xlink:href="./img/sprites.svg#clock"></use>
+                  </svg>
+                  18:00
+                </span>
+              </div>
+
+              <h3 class="master-class__heading">Творческая ретушь для начинающих</h3>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="section__contacts contacts">
+  <div class="container contacts__container">
+    <h2 class="contacts__heading">Контакты</h2>
+
+    <div class="contacts__content">
+      <div class="contacts__left">
+        <div class="contacts__overlay overlay overlay_active">
+          <button class="overlay__close btn-clear"></button>
+
+          <div class="overlay__info">
+            <h3 class="overlay__heading">Студия “High pass”</h3>
+            <address class="overlay__address">
+              107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82
+              <a href="tel:+749542423532" class="overlay__link">
+                <svg class="overlay__icon" width="22" height="22">
+                  <use xlink:href="./img/sprites.svg#phone"></use>
+                </svg>
+                +7 (495) 42-423-532
+              </a>
+            </address>
+          </div>
+        </div>
+
+        <div class="contacts__map" id="map"></div>
+      </div>
+      <div class="contacts__application application">
+        <h3 class="application__heading">Оставить заявку</h3>
+        <p class="application__description">
+          Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия
+        </p>
+
+        <form action="" class="application__form">
+          <label for="" class="application__label">
+            <input type="text" class="application__input" placeholder="Имя" id="name">
+          </label>
+          <label for="" class="application__label">
+            <input type="text" class="application__input" placeholder="E-mail" id="Email">
+          </label>
+          <textarea class="application__input application__textarea" placeholder="Комментарий" id="comments"></textarea>
+
+          <button class="btn-clear application__button">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__logo">
+      <img src="./img/logo.svg" alt="Логотип" class="footer__img">
+      <span class="footer__copyright">Фотостудия High pass® 2018-2020</span>
+    </div>
+
+    <div class="footer__info">
+      <p class="footer__description">
+        Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра. <br>
+        <a href="" class="footer__link">© Имоджен Каннингем</a>
+      </p>
+    </div>
+
+    <div class="footer__interesting">
+      <h2 class="footer__heading">Больше интересного:</h2>
+
+      <ul class="footer__apps apps">
+        <li class="footer__app apps__app">
+          <a href="#" class="apps__link">
+            <svg class="footer__icon apps__icon" width="30" height="30">
+              <use xlink:href="./img/sprites.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__app apps__app">
+          <a href="#" class="apps__link">
+            <svg class="footer__icon apps__icon" width="30" height="30">
+              <use xlink:href="./img/sprites.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__app apps__app">
+          <a href="#" class="apps__link">
+            <svg class="footer__icon apps__icon" width="30" height="30">
+              <use xlink:href="./img/sprites.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,68 @@
+@import "./_mixins.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  @include container();
+}
+
+img {
+  width: 100%;
+}
+
+svg path {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.heading {
+  @include heading();
+}
+
+.hashtag {
+  @include hashtag();
+}
+
+.bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+.centering {
+  width: max-content;
+  margin: 0 auto;
+}
+
+@media (max-width: $breakPoint1024) {
+  .container {
+    @include containerTablet();
+  }
+}
+
+@media (max-width: $breakPoint768) {
+  .container {
+    @include container768();
+  }
+}
+
+@media (max-width: $breakPointMobile) {
+  .container {
+    @include containerMobile();
+  }
+
+  .heading {
+    @include headingMobile();
+  }
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 11px;
+}
